@@ -1,0 +1,26 @@
+# Jekyll
+/_site
+/.sass-cache
+/.jekyll-metadata
+
+# Node.js
+/node_modules
+/package-lock.json
+
+# Gemfile.lock
+/Gemfile.lock
+
+# Finder
+.DS_Store
+._.*
+
+# Ruby
+/.ruby-version
+/.ruby-gemset
+/.ruby-env
+
+# Gems
+/vendor
+
+# Keep the keepers
+! .keep

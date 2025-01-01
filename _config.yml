@@ -1,0 +1,30 @@
+permalink: /posts/:year/:month/:day/:title.html
+
+exclude:
+- .ruby-version
+- .ruby-gemset
+- Gemfile
+- Gemfile.lock
+- README.md
+- CNAME
+- package.json
+- package-lock.json
+- node_modules/
+- build.js
+- assets/javascripts/main.src.js
+- cache/
+- script/
+- vendor/
+
+markdown: kramdown
+highlighter: rouge
+title: NVGator
+subtitle: An opinionated version checker
+production_url: https://nvgator.github.io/
+
+sass:
+  style: compressed
+  sass_dir: assets/stylesheets
+
+author:
+  github: nvgator

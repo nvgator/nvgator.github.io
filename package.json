@@ -1,0 +1,11 @@
+{
+  "name": "TzvetkoffNet",
+  "preferGlobal": false,
+  "version": "0.0.1",
+  "author": "Latchezar Tzvetkoff <latchezar[foo]tzvetkoff[bar]net>",
+  "description": "Yada Yada Yada!",
+  "dependencies" : {
+    "uglify-js": "",
+    "clean-css" :  ""
+  }
+}

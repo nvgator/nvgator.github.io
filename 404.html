@@ -1,0 +1,53 @@
+---
+title: 404
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- charset, viewport and title -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1, user-scalable=no" />
+  <title>{{ page.title }}</title>
+
+  <!-- metas for webapps added to homescreen and other stuff -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- icons -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
+  <!-- stylesheets and javascripts -->
+  <link rel="stylesheet" type="text/css" media="screen, projection" href="/assets/stylesheets/main.css" />
+  <script type="text/javascript" src="/assets/javascripts/main.js"></script>
+</head>
+<body>
+  <div id="wrapper">
+    {% include header.html %}
+
+    <article style="text-align: center; background: #c0c0c0;">
+      <img src="/assets/images/404.png" alt="" />
+      <p>You will be redirected in <strong id="sec">15</strong> seconds...</p>
+      <p>If you're in a hurry, click <a href="/">here</a>.</p>
+      <p>Alternatively, you can always choose to <a href="javascript:;" onclick="clearInterval(interval);">stay on this page</a>.</p>
+      <script type="text/javascript">
+        //<![CDATA[
+          var sec = 15;
+          var interval = setInterval(function() {
+            document.getElementById('sec').innerHTML = --sec;
+            if (!sec) {
+              clearInterval(interval);
+              setTimeout(function() {
+                location.href = '/';
+              }, 128);
+            }
+          }, 1024);
+        //]]>
+      </script>
+    </article>
+
+    {% include footer.html %}
+  </div>
+</body>
+</html>

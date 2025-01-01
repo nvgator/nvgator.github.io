@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- charset, viewport and title -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=1, user-scalable=no" />
+  <title>{{ site.title }}</title>
+
+  <!-- metas for webapps added to homescreen and other stuff -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- icons -->
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+
+  <!-- stylesheets and javascripts -->
+  <link rel="stylesheet" type="text/css" media="screen, projection" href="/assets/stylesheets/main.css" />
+  <script type="text/javascript" src="/assets/javascripts/main.js"></script>
+</head>
+<body>
+  <div id="wrapper" class="default">
+    {% include header.html %}
+
+    <article>
+      <header class="article">
+        <h1 id="title">{{ page.title }}</h1>
+      </header>
+
+      {{ content }}
+    </article>
+
+    {% include footer.html %}
+  </div>
+</body>
+</html>
